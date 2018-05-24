@@ -1,0 +1,11 @@
+body {
+    user-select: none;
+    background-color: lightseagreen;
+    line-height: 2em;
+}
+
+a,
+a:visited {
+    font-size: 16pt;
+    color: orangered;
+}

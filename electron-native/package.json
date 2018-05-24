@@ -1,0 +1,12 @@
+{
+    "name": "electron-native",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+        "build-with-npm": "npm rebuild --runtime=electron --target=2.0.1 --disturl=https://atom.io/download/electron --build-from-source --force",
+        "build-with-electron-rebuild": "electron-rebuild --version 2.0.1 --force"
+    },
+    "dependencies": {
+        "node-sass": "^4.9.0"
+    }
+}

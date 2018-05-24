@@ -1,0 +1,35 @@
+{
+    "name": "techorama",
+    "version": "0.0.1",
+    "description": "Tales from the Electron field",
+    "main": "index.js",
+    "scripts": {
+        "build-electron-crashpad": "cd electron-crashpad && electron-packager ./ --platform win32,darwin --asar --electron-version 2.0.1 --out ./apps --overwrite",
+        "prebuild-electron-remote": "rimraf electron-remote/apps",
+        "build-electron-remote": "cd electron-remote && electron-packager ./ --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps",
+        "prebuild-electron-remote-finished": "rimraf electron-remote-finished/apps",
+        "build-electron-remote-finished": "cd electron-remote-finished && electron-packager ./ --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps",
+        "build-electron-devtron": "cd electron-devtron && electron-packager ./ --icon ../gfx/techoramabe --platform win32,darwin --asar --electron-version 1.8.7 --overwrite true --out ./apps",
+        "build-electron-devtron-finished": "cd electron-devtron-finished && electron-packager ./ --icon ../gfx/techoramabe --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps",
+        "prebuild-electron-ux": "rimraf electron-ux/apps",
+        "build-electron-ux": "cd electron-ux && electron-packager ./ --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps",
+        "prebuild-electron-native": "rimraf electron-native/apps",
+        "build-electron-native": "cd electron-native && npm run build-with-npm && electron-packager ./ --icon ../gfx/techoramabe --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps",
+        "prebuild-electron-ux-finished": "rimraf electron-ux-finished/apps",
+        "build-electron-ux-finished": "cd electron-ux-finished && electron-packager ./ --icon ../gfx/techoramabe --platform win32,darwin --asar --electron-version 2.0.1 --overwrite true --out ./apps && open ./apps",
+        "build-all": "npm run build-electron-crashpad && npm run build-electron-remote && npm run build-electron-remote-finished && npm run build-electron-devtron && npm run build-electron-devtron-finished && npm run build-electron-ux && npm run build-electron-ux-finished"
+    },
+    "keywords": [
+        "TechoramaBE",
+        "Thorsten Hans",
+        "Electron"
+    ],
+    "author": "Thorsten Hans <thorsten.hans@gmail.com> (https://thorsten-hans.com/)",
+    "license": "ISC",
+    "devDependencies": {
+        "electron-packager": "^12.0.2",
+        "rimraf": "^2.6.2",
+        "electron": "^2.0.1"
+    },
+    "dependencies": {}
+}

@@ -1,0 +1,8 @@
+{
+    "name": "techorama-be-ux-finished",
+    "version": "1.0.0",
+    "main": "main.js",
+    "dependencies": {
+        "electron-store": "^1.3.0"
+    }
+}
